@@ -35,9 +35,21 @@ void printData(vector<int> data) {
     cout << endl;
 }
 
+void generate(vector<int> data, int size) {
+    for(int i=0; i<size; i++) {
+        int temp=rand() % 1000 + 1;
+        data.push_back(temp);
+    }
+}
+
 int main() {
+    int size=0;
+
+    cout << "Masukkan jumlah data: "; cin >> size;
 
     vector<int> data={};
+
+    generate(data, size);
 
     cout << "Data sebelum sort = ";
     printData(data);
