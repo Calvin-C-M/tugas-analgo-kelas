@@ -32,11 +32,15 @@ void inputData(vector<int> data, int amount) {
 void printData(vector<int> data) {
     for(int d: data)
         cout << d << "  ";
+    cout << endl;
 }
 
 int main() {
 
     vector<int> data={};
+
+    cout << "Data sebelum sort = ";
+    printData(data);
 
     auto start=high_resolution_clock::now();
 
@@ -47,6 +51,9 @@ int main() {
     // End Function
 
     auto stop=high_resolution_clock::now();
+
+    cout << "Data setelah sort = ";
+    printData(data);
 
     auto duration=duration_cast<microseconds>(stop-start);
 
