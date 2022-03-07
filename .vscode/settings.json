@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "chrono": "cpp"
+        "*.pro": "prolog",
+        "chrono": "cpp",
+        "iostream": "cpp"
     }
 }

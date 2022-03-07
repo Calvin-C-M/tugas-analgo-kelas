@@ -9,3 +9,10 @@ int reverse(int n) {
         reverse(n/10);
     }
 }
+
+int main() {
+    int angka=0;
+
+    cout << "Masukkan angka: "; cin >> angka;
+    cout << "Reverse = " << reverse(angka);
+}
