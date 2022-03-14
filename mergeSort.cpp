@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-
-using namespace std;
+#include "lib.cpp"
 
 void merge(vector<int> &array, int left, int mid, int right) {
     int subArrayLeft=mid-left+1;
@@ -50,4 +47,24 @@ void mergeSort(vector<int> &array, int begin, int end) {
     mergeSort(array,begin,mid);
     mergeSort(array,mid+1,end);
     merge(array,begin,mid,end);
+}
+
+int main() {
+    vector<int> data={};
+    long long jumlahData=0;
+
+    cout << "Masukkan jumlah data: "; cin >> jumlahData;
+
+    isiData(data,jumlahData);
+
+    auto start=high_resolution_clock::now();
+
+    mergeSort(data,0,data.size()-1);
+
+    auto stop=high_resolution_clock::now();
+
+    auto duration=duration_cast<microseconds>(stop-start);
+
+    cout << "Menggunakan merge sort" << endl
+         << "Durasi fungsi: " << duration.count() << " microseconds" << endl;
 }
