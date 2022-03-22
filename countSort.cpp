@@ -4,27 +4,9 @@
 
 using namespace std;
 
-int maxElement(vector<int> data) {
-    int value=0;
-    for(int d: data) {
-        if(value < d) 
-            value=d;
-    }
-    return value;
-}
-
-int minElement(vector<int> data) {
-    int value=maxElement(data);
-    for(int d: data) {
-        if(value > d) 
-            value=d;
-    }
-    return value;
-}
-
 void countSort(vector<int> &data) {
-    int max=maxElement(data);
-    int min=minElement(data);
+    int max=*max_element(data.begin(),data.end());
+    int min=*min_element(data.begin(),data.end());
     int range=max-min+1;
 
     vector<int> count(range), output(data.size());
