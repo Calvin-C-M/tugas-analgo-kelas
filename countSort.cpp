@@ -50,6 +50,7 @@ void printData(vector<int> data) {
 
 int main() {
     vector<int> array={3,6,4,1,3,5,3};
+    cout << "Data sebelum di-sort: "; printData(array);
     countSort(array);
-    printData(array);
+    cout << "Data setelah di-sort: "; printData(array);
 }
