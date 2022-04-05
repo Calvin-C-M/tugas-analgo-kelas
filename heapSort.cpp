@@ -38,24 +38,25 @@ void printData(vector<int> data) {
 }
 
 int main() {
-    int jumlah=0;
-    vector<int> data={};
+    vector<int> jumlahData={50,100,500,1000,5000};
 
-    cout << "Jumlah isi data: "; cin >> jumlah;
+    for(int jumlah: jumlahData) {
+        vector<int> data={};
 
-    for(int i=0; i<jumlah; i++) {
-        int temp=rand()%100;
-        data.push_back(temp);
+        for(int i=0; i<jumlah; i++) {
+            int temp=rand()%100;
+            data.push_back(temp);
+        }
+
+        auto start=high_resolution_clock::now();
+
+        heapSort(data,data.size());
+
+        auto stop=high_resolution_clock::now();
+
+        auto duration=duration_cast<microseconds>(stop-start);
+
+        cout << "Jumlah data = " << jumlah << endl
+            << "Waktu run time = " << duration.count() << " microseconds" << endl;
     }
-
-    auto start=high_resolution_clock::now();
-
-    heapSort(data,data.size());
-
-    auto stop=high_resolution_clock::now();
-
-    auto duration=duration_cast<microseconds>(stop-start);
-
-    cout << "Jumlah data = " << jumlah << endl
-         << "Waktu run time = " << duration.count() << " microseconds" << endl;
 }
