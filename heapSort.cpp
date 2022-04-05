@@ -1,7 +1,9 @@
 #include <iostream>
 #include <vector>
+#include <chrono>
 
 using namespace std;
+using namespace std::chrono;
 
 void heapify(vector<int> &data, int n, int i) {
     int max=i;
@@ -38,6 +40,16 @@ void printData(vector<int> data) {
 int main() {
     vector<int> data={90,13,75,34,20};
     cout << "Data sebelum sorting = "; printData(data);
+
+    auto start=high_resolution_clock::now();
+
     heapSort(data,data.size());
+
+    auto stop=high_resolution_clock::now();
+
+    auto duration=duration_cast<microseconds>(stop-start);
+
     cout << "Data setelah sorting = "; printData(data);
+
+    cout << "Waktu run time: " << duration.count() << " microseconds" << endl;
 }
