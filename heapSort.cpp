@@ -38,8 +38,15 @@ void printData(vector<int> data) {
 }
 
 int main() {
-    vector<int> data={90,13,75,34,20};
-    cout << "Data sebelum sorting = "; printData(data);
+    int jumlah=0;
+    vector<int> data={};
+
+    cout << "Jumlah isi data: "; cin >> jumlah;
+
+    for(int i=0; i<jumlah; i++) {
+        int temp=rand()%100;
+        data.push_back(temp);
+    }
 
     auto start=high_resolution_clock::now();
 
@@ -48,8 +55,6 @@ int main() {
     auto stop=high_resolution_clock::now();
 
     auto duration=duration_cast<microseconds>(stop-start);
-
-    cout << "Data setelah sorting = "; printData(data);
 
     cout << "Waktu run time: " << duration.count() << " microseconds" << endl;
 }
