@@ -40,6 +40,8 @@ void printData(vector<int> data) {
 int main() {
     vector<int> jumlahData={50,100,500,1000,5000};
 
+    cout << "Jumlah Data\t\tWaktu Running" << endl;
+
     for(int jumlah: jumlahData) {
         vector<int> data={};
 
@@ -56,7 +58,8 @@ int main() {
 
         auto duration=duration_cast<microseconds>(stop-start);
 
-        cout << "Jumlah data = " << jumlah << endl
-            << "Waktu run time = " << duration.count() << " microseconds" << endl;
+        // cout << "Jumlah data = " << jumlah << endl
+        //     << "Waktu run time = " << duration.count() << " microseconds" << endl;
+        cout << jumlah << "\t\t\t" << duration.count() << " microseconds" << endl;
     }
 }
