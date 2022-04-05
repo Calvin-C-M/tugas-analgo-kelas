@@ -56,5 +56,6 @@ int main() {
 
     auto duration=duration_cast<microseconds>(stop-start);
 
-    cout << "Waktu run time: " << duration.count() << " microseconds" << endl;
+    cout << "Jumlah data = " << jumlah << endl
+         << "Waktu run time = " << duration.count() << " microseconds" << endl;
 }
