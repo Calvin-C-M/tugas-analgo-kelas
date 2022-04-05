@@ -32,8 +32,12 @@ void heapSort(vector<int> &data, int n) {
 void printData(vector<int> data) {
     for(int d: data) 
         cout << d << "  ";
+    cout << endl;
 }
 
 int main() {
-
+    vector<int> data={90,13,75,34,20};
+    cout << "Data sebelum sorting = "; printData(data);
+    heapSort(data,data.size());
+    cout << "Data setelah sorting = "; printData(data);
 }
