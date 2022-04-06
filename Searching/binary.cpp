@@ -18,6 +18,9 @@ bool binarySearch(vector<int> data, int target, int left, int right) {
     return false;
 }
 
-int main() {
+/*
+REFERENSI KOMPLEKSITAS :
 
-}
+https://iq.opengenus.org/time-complexity-of-binary-search/
+https://www.geeksforgeeks.org/complexity-analysis-of-binary-search/
+*/

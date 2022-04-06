@@ -1,7 +1,6 @@
 #include "../header.hpp"
 
 bool linearSearch(vector<int> data, int target) {
-    // bool found=false;
     for(int d: data) {
         if(d == target) 
             return true;
@@ -9,6 +8,10 @@ bool linearSearch(vector<int> data, int target) {
     return false;
 }
 
-int main() {
+/*
+REFERENSI KOMPLEKSITAS :
 
-}
+https://iq.opengenus.org/time-complexity-of-linear-search/
+https://www.geeksforgeeks.org/analysis-of-algorithms-set-2-asymptotic-analysis/
+
+*/
