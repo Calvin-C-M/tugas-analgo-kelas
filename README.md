@@ -1,7 +1,7 @@
 # Persiapan UTS
 ## Deskripsi
 <p>
-Dibagian ini bakalan jadi kumpulan source code untuk UTS Analisis Algoritma (Dosen: Pak R Sudrajat)
+Dibagian ini bakalan jadi kumpulan source code dan referensi hitungan kompleksitas untuk UTS Analisis Algoritma (Dosen: Pak R Sudrajat)
 </p>
 
 ## Kisi-kisi
