@@ -16,3 +16,10 @@ void bucketSort(vector<float> &data) {
         for(int j=0; j<bucket[i].size(); j++)
             data.at(index++)=bucket[i][j];
 }
+
+/*
+REFERENSI KOMPLEKSITAS: 
+
+https://www.programiz.com/dsa/bucket-sort
+https://iq.opengenus.org/time-and-space-complexity-of-bucket-sort/
+*/

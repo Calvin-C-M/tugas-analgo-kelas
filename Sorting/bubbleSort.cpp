@@ -7,6 +7,9 @@ void bubbleSort(vector<int> &data) {
                 swap(data.at(j),data.at(j+1));
 }
 
-int main() {
+/*
+REFERENSI KOMPLEKSITAS: 
 
-}
+https://www.happycoders.eu/algorithms/bubble-sort/#Bubble_Sort_Time_Complexity
+https://www.simplilearn.com/tutorials/data-structure-tutorial/bubble-sort-algorithm
+*/

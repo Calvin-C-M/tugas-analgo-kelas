@@ -38,3 +38,9 @@ void countSort(vector<int> &data) {
     for(int i=0; i<data.size(); i++) 
         data[i]=output[i];
 }
+
+/*
+REFERENSI KOMPLEKSITAS: 
+
+https://iq.opengenus.org/time-and-space-complexity-of-counting-sort/#:~:text=The%20time%20complexity%20of%20counting%20sort%20algorithm%20is%20O(n,of%20values%20to%20be%20sorted.
+*/

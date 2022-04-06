@@ -23,6 +23,9 @@ void quickSort(vector<int> &data, int low, int high) {
     }
 }
 
-int main() {
+/*
+REFERENSI KOMPLEKSITAS: 
 
-}
+https://www.javatpoint.com/quick-sort
+https://iq.opengenus.org/time-and-space-complexity-of-quick-sort/
+*/

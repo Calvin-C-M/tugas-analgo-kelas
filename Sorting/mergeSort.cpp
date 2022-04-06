@@ -48,3 +48,10 @@ void mergeSort(vector<int> &data, int begin, int end) {
     mergeSort(data,mid+1,end);
     merge(data,begin,mid,end);
 }
+
+/*
+REFERENSI KOMPLEKSITAS: 
+
+https://iq.opengenus.org/time-complexity-of-merge-sort/
+https://www.studytonight.com/data-structures/merge-sort
+*/

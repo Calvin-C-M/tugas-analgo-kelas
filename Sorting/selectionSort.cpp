@@ -26,3 +26,10 @@ namespace SelectionSort {
         }
     }
 }
+
+/*
+REFERENSI KOMPLEKSITAS: 
+
+https://iq.opengenus.org/time-complexity-of-selection-sort/
+https://www.gatevidyalay.com/selection-sort-selection-sort-algorithm/
+*/

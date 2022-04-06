@@ -15,6 +15,9 @@ void insertionSort(vector<int> &data) {
     }
 }
 
-int main() {
+/*
+REFERENSI KOMPLEKSITAS: 
 
-}
+https://brilliant.org/wiki/insertion/#:~:text=When%20analyzing%20algorithms%2C%20the%20average,list%20is%20already%20mostly%20sorted.
+https://iq.opengenus.org/insertion-sort-analysis/
+*/
