@@ -33,10 +33,10 @@ void inputGraph(Graph *graph, int E) {
     }
 }
 
-void addEdge(Edge *edge, int src, int dest, int weight) {
-    edge->src=src;
-    edge->dest=dest;
-    edge->weight=weight;
+void addEdge(Edge &edge, int src, int dest, int weight) {
+    edge.src=src;
+    edge.dest=dest;
+    edge.weight=weight;
 }
 
 void printGraph(int dist[], int n) {
@@ -77,14 +77,30 @@ void bellmanFord(Graph* graph, int src) {
 }
 
 int main() {
-    int V=0;
-    int E=0;
+    // ============ KALO MAU PAKE INPUT ==============
+    // int V=0;
+    // int E=0;
+    // ===============================================
+
+    int V=5;
+    int E=8;
     Graph *graph=create(V,E);
 
-    cout << "Vertex: "; cin >> V;
-    cout << "Edge: "; cin >> E;
+    // ============ KALO MAU PAKE INPUT ==============
+    // cout << "Vertex: "; cin >> V;
+    // cout << "Edge: "; cin >> E;
 
-    inputGraph(graph,E);
+    // inputGraph(graph,E);
+    // ===============================================
+
+    addEdge(graph->edge[0],0,1,-1);
+    addEdge(graph->edge[1],0,2,4);
+    addEdge(graph->edge[2],1,2,3);
+    addEdge(graph->edge[3],1,3,2);
+    addEdge(graph->edge[4],1,4,2);
+    addEdge(graph->edge[5],3,2,5);
+    addEdge(graph->edge[6],3,1,1);
+    addEdge(graph->edge[7],4,3,-3);
 
     auto start=high_resolution_clock::now();
 
