@@ -90,7 +90,7 @@ int main() {
 
     /*
     
-    NANTI TIAP MAU EKSEKUSI, KOMEN DULU DATASET YANG GAMAU DIPAKE
+    NANTI TIAP MAU EKSEKUSI, KOMEN DULU DATASET YANG GAMAU DIPAKE (1 kali eksekusi cuman boleh pake 1 dataset)
 
     */
 
@@ -105,16 +105,16 @@ int main() {
     addEdge(graph->edge[7],4,3,-3);
 
     // DATASET #2 (V=5, E=10)
-    addEdge(graph->edge[0],0,1,6);
-    addEdge(graph->edge[1],0,2,7);
-    addEdge(graph->edge[2],1,3,5);
-    addEdge(graph->edge[3],1,2,8);
-    addEdge(graph->edge[4],1,4,-4);
-    addEdge(graph->edge[5],2,3,-3);
-    addEdge(graph->edge[6],2,4,9);
-    addEdge(graph->edge[7],3,1,-2);
-    addEdge(graph->edge[8],4,0,2);
-    addEdge(graph->edge[9],4,3,7);
+    // addEdge(graph->edge[0],0,1,6);
+    // addEdge(graph->edge[1],0,2,7);
+    // addEdge(graph->edge[2],1,3,5);
+    // addEdge(graph->edge[3],1,2,8);
+    // addEdge(graph->edge[4],1,4,-4);
+    // addEdge(graph->edge[5],2,3,-3);
+    // addEdge(graph->edge[6],2,4,9);
+    // addEdge(graph->edge[7],3,1,-2);
+    // addEdge(graph->edge[8],4,0,2);
+    // addEdge(graph->edge[9],4,3,7);
 
     auto start=high_resolution_clock::now();
 
