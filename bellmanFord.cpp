@@ -77,13 +77,8 @@ void bellmanFord(Graph* graph, int src) {
 }
 
 int main() {
-    // ============ KALO MAU PAKE INPUT ==============
-    // int V=0;
-    // int E=0;
-    // ===============================================
-
-    int V=5;
-    int E=8;
+    int V=0; // Ganti sesuai value yang ada di dataset
+    int E=0; // Ganti sesuai value yang ada di dataset
     Graph *graph=create(V,E);
 
     // ============ KALO MAU PAKE INPUT ==============
@@ -93,6 +88,13 @@ int main() {
     // inputGraph(graph,E);
     // ===============================================
 
+    /*
+    
+    NANTI TIAP MAU EKSEKUSI, KOMEN DULU DATASET YANG GAMAU DIPAKE
+
+    */
+
+    // DATASET #1 (V=5, E=8)
     addEdge(graph->edge[0],0,1,-1);
     addEdge(graph->edge[1],0,2,4);
     addEdge(graph->edge[2],1,2,3);
@@ -101,6 +103,18 @@ int main() {
     addEdge(graph->edge[5],3,2,5);
     addEdge(graph->edge[6],3,1,1);
     addEdge(graph->edge[7],4,3,-3);
+
+    // DATASET #2 (V=5, E=10)
+    addEdge(graph->edge[0],0,1,6);
+    addEdge(graph->edge[1],0,2,7);
+    addEdge(graph->edge[2],1,3,5);
+    addEdge(graph->edge[3],1,2,8);
+    addEdge(graph->edge[4],1,4,-4);
+    addEdge(graph->edge[5],2,3,-3);
+    addEdge(graph->edge[6],2,4,9);
+    addEdge(graph->edge[7],3,1,-2);
+    addEdge(graph->edge[8],4,0,2);
+    addEdge(graph->edge[9],4,3,7);
 
     auto start=high_resolution_clock::now();
 
