@@ -23,15 +23,11 @@ Graph* create(int V, int E) {
 }
 
 void inputGraph(Graph *graph, int E) {
-    for(int i=0; i<E; i++) {
-        int src=0;
-        int dest=0;
-        int weight=0;
-        
-        cout << "Edge " << i << endl;
-        cout << "Source: "; cin >> src;
-        cout << "Destination: "; cin >> dest;
-        cout << "Weight: "; cin >> weight;
+    for(int i=0; i<E; i++) {        
+        cout << "\nEdge " << i << endl;
+        cout << "Source: "; cin >> graph->edge[i].src;
+        cout << "Destination: "; cin >> graph->edge[i].dest;
+        cout << "Weight: "; cin >> graph->edge[i].weight;
     }
 }
 
@@ -76,6 +72,9 @@ int main() {
     int V=0;
     int E=0;
     Graph *graph=create(V,E);
+
+    cout << "Vertex: "; cin >> V;
+    cout << "Edge: "; cin >> E;
 
     inputGraph(graph,E);
     bellmanFord(graph,0);
