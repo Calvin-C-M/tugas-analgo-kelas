@@ -1,6 +1,8 @@
 #include <iostream>
+#include <chrono>
 
 using namespace std;
+using namespace std::chrono;
 
 struct Edge {
     int src;
@@ -29,6 +31,12 @@ void inputGraph(Graph *graph, int E) {
         cout << "Destination: "; cin >> graph->edge[i].dest;
         cout << "Weight: "; cin >> graph->edge[i].weight;
     }
+}
+
+void addEdge(Edge *edge, int src, int dest, int weight) {
+    edge->src=src;
+    edge->dest=dest;
+    edge->weight=weight;
 }
 
 void printGraph(int dist[], int n) {
@@ -77,5 +85,14 @@ int main() {
     cout << "Edge: "; cin >> E;
 
     inputGraph(graph,E);
+
+    auto start=high_resolution_clock::now();
+
     bellmanFord(graph,0);
+
+    auto stop=high_resolution_clock::now();
+
+    auto duration=duration_cast<microseconds>(stop-start);
+
+    cout << "Durasi algoritma = " << duration.count() << " microseconds";
 }
