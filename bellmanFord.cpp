@@ -22,6 +22,19 @@ Graph* create(int V, int E) {
     return graph;
 }
 
+void inputGraph(Graph *graph, int E) {
+    for(int i=0; i<E; i++) {
+        int src=0;
+        int dest=0;
+        int weight=0;
+        
+        cout << "Edge " << i << endl;
+        cout << "Source: "; cin >> src;
+        cout << "Destination: "; cin >> dest;
+        cout << "Weight: "; cin >> weight;
+    }
+}
+
 void printGraph(int dist[], int n) {
     cout << "Vertex\t\tDistance from Source" << endl;
     for(int i=0; i<n; i++)
@@ -64,16 +77,6 @@ int main() {
     int E=0;
     Graph *graph=create(V,E);
 
-    for(int i=0; i<E; i++) {
-        int src=0;
-        int dest=0;
-        int weight=0;
-        
-        cout << "Edge " << i << endl;
-        cout << "Source: "; cin >> src;
-        cout << "Destination: "; cin >> dest;
-        cout << "Weight: "; cin >> weight;
-    }
-
+    inputGraph(graph,E);
     bellmanFord(graph,0);
 }
