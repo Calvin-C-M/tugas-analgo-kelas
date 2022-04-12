@@ -56,7 +56,7 @@ class Graph {
         this->edge.push_back({w,x,y});
     }
 
-    void kruskalMST() {
+    void genericMST() {
         sort(this->edge.begin(), this->edge.end());
 
         DSU s(V);
@@ -86,5 +86,5 @@ int main() {
     graph.addEdge(2,0,6);
     graph.addEdge(0,3,5);
 
-    graph.kruskalMST();
+    graph.genericMST();
 }
