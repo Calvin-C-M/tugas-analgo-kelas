@@ -86,9 +86,12 @@ int main() {
 
     inputGraph(graph,E);
 
+    int src=0;
+    cout << "Masukkan sumber: "; cin >> src; 
+
     auto start=high_resolution_clock::now();
 
-    bellmanFord(graph,0);
+    bellmanFord(graph,src);
 
     auto stop=high_resolution_clock::now();
 
